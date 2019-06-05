@@ -1,0 +1,128 @@
+$browser-default-font-size: 37.5px !default;
+@function rem($px) {
+@return $px / $browser-default-font-size * 1rem;
+}
+html {
+font-size: browser-default-font-size;
+}
+.home{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    >header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        height: rem(40px);
+        font-size: rem(14px);
+        color:#404040;
+        padding:0 rem(10px);
+       >p{
+           >span{
+               margin-right:rem(10px);
+           }
+         >i{
+             font-size: rem(12px);
+             transform: scale(2)
+            }  
+       }
+    }
+}
+section{
+    width: 100%;
+    flex:1;
+    overflow: auto;
+}
+.tabbar{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: rem(44px);
+    overflow: auto;
+    >span{
+        padding:rem(4px) rem(20px);
+        text-align: center;
+        background: #FAFAFA;
+        color:#999;
+        margin:0 rem(10px);
+        flex-shrink: 0;
+        border-radius: rem(2px);
+    }
+    >span.active{
+       border:1px solid #E2C9B0;
+       color: #E2C9B0;
+    }
+}
+.goods{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    height: auto;
+    padding:0 rem(10px);    
+}
+.goodItem{
+    width: 30%;
+    height: auto;
+    flex-shrink: 0;
+    margin:rem(10px) rem(5px);
+    >dt{
+        width: 100%;
+        height: rem(95px);
+        >img{
+            height:95%;
+        }
+    }
+    >dd{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        font-size: rem(14px);
+        >p{
+            width: 100%;
+        }
+        >p:last-child{
+            margin:rem(5px) 0;
+            display: flex;
+            justify-content:space-between;
+            align-items: center;
+        }
+    }
+}
+.price{
+font-size: rem(12px);
+color:#333;
+font-weight: 800;
+    >s{
+        color:#999;
+        font-size: rem(10px);
+        transform: scale(0.7)
+    }
+}
+.count{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .num{
+        margin:0 rem(3px);
+        font-weight: normal;
+        font-size: rem(12px)
+    }
+    >.button{
+        width: rem(20px);
+        height: rem(20px);
+        line-height: rem(15px);
+        text-align: center;
+        background:#E6E6E6;
+        color:#fff;
+        font-size: rem(18px);
+        border-radius: rem(7px)
+    }
+}
+
