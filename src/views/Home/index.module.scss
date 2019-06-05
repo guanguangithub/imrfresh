@@ -11,23 +11,30 @@ font-size: browser-default-font-size;
     display: flex;
     flex-direction: column;
     >header{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
         width: 100%;
-        height: rem(40px);
-        font-size: rem(14px);
-        color:#404040;
-        padding:0 rem(10px);
-       >p{
-           >span{
-               margin-right:rem(10px);
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        .header{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            height: rem(40px);
+            font-size: rem(14px);
+            color:#404040;
+            padding:0 rem(10px);
+           >p{
+               >span{
+                   margin-right:rem(10px);
+               }
+             >i{
+                 font-size: rem(12px);
+                 transform: scale(2)
+                }  
            }
-         >i{
-             font-size: rem(12px);
-             transform: scale(2)
-            }  
-       }
+        }
+       
     }
 }
 section{
@@ -114,15 +121,97 @@ font-weight: 800;
         font-weight: normal;
         font-size: rem(12px)
     }
-    >.button{
-        width: rem(20px);
-        height: rem(20px);
+   
+}
+.button{
+    width: rem(20px);
+    height: rem(20px);
+    line-height: rem(18px);
+    text-align: center;
+    background:#E5A86C;
+    color:#fff;
+    font-size: rem(18px);
+    border-radius: rem(7px)
+}
+.none{
+    display: none;
+}
+.grey{
+    background: #E6E6E6;
+    
+}
+.footer{
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: rem(50px);
+    background: #515151;
+}
+.shopcar{
+    display: flex;
+    position: absolute;
+    top:rem(-10px);
+    left:3%;
+    width: rem(50px);
+    height: rem(50px);
+    border-radius: 50%;
+    background: #474747 url('../../assets//img//2019-06-05_145127.png') no-repeat center center;
+    background-size: 50%; 
+    >b{ 
+        position: absolute;
+        top:rem(8px);
+        right:rem(8px);
+        width: rem(15px);
+        height: rem(15px);
         line-height: rem(15px);
         text-align: center;
-        background:#E6E6E6;
         color:#fff;
-        font-size: rem(18px);
-        border-radius: rem(7px)
+        font-weight: normal;
+        border-radius: 50%;
+        background: #FF4891;
+
     }
 }
+.shopcarWrap{
+    width:rem(70px);
 
+}
+.allPrice{
+    flex:1;
+    display: flex;
+    flex-direction: column;
+    height:rem(50px);
+    padding-top:rem(5px);
+    >.money{
+        width: 100%;
+        color:#fff;
+        font-size: rem(14px);
+        font-weight: normal;
+    }    
+    >.save{
+        font-size: rem(12px);
+        font-weight: normal;
+        color:#FF4891;padding-top:rem(3px);
+    }
+}
+.goPay{
+    width: rem(100px);
+    height: rem(50px);
+    line-height: rem(50px);
+    text-align: center;
+    font-size: rem(16px);
+    
+    background: #FF4891;
+    color: #fff;
+}
+.goPay::after{
+    display: inline-block;
+    content: '';
+    width: 0;
+    height: 0;
+    border:rem(5px) solid transparent;
+    border-left-color: #fff;
+    margin-left:rem(5px);
+}
